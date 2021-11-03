@@ -1,4 +1,5 @@
-VK_API_STADALONE = '' """
+VK_API_STADALONE = ''
+"""
 Приложения создаются по ссылке https://vk.com/apps?act=manage
 Инструкция по получению VK_API_STADALONE
 
@@ -14,10 +15,8 @@ vk_group = ["-72685559", "-74761029", "-90634038", "-65269630", "-32493847", "-7
 filter_wallGet = 'all'
 count_wallGet = 10
 extended_wallGet = 0
-ownerId_wallPost = '-202792172'
+ownerId_wallPost = '-201637165' #ID группы
 from_group_wallPost = 1
-album_id = '277668630'
-group_id = '202792172' #альбом
 blacklist = ["#corsair ", "#corsair", "#palit ", "#palit", "#nvidia ", "#nvidia", "#Sapphire ", "#Sapphire", "#sapphire ", "#sapphire ", "@amdrussia"]
 stop_list = ["GFN", "GFN.RU", "реклама", "Реклама", "Команда NVIDIA", "http", "club", ".ru", ".RU", ".com", ".COM", "пишите", "Видео", "видео", "ролик", "Ролик"]
 TRANSPARENCY = 15
