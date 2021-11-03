@@ -1,25 +1,14 @@
-VK_API_STADALONE = ''
-"""
-Приложения создаются по ссылке https://vk.com/apps?act=manage
-Инструкция по получению VK_API_STADALONE
-
-Берём эту ссылку и подставляем вместо [CLIENT_ID] ID вашего приложения:
-
-https://oauth.vk.com/authorize?client_id=[CLIENT_ID]&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=photos,wall,offline&response_type=token&v=5.131
-
-Учтите, что приложение должно быть включено
-"""
 VK_API_USER = '' #https://vkhost.github.io/
 VK_API_V = '5.131'
-vk_group = ["-72685559", "-74761029", "-90634038", "-65269630", "-32493847", "-72378974"]
+vk_group = ["-1", "-2", "-3", "-4"] #Перечень групп с которых надо брать посты вводить ID групп с минусом!!!
 filter_wallGet = 'all'
-count_wallGet = 10
+count_wallGet = 10 #Сколько новых постов будет видеть скрипт в групах, максимум 100
 extended_wallGet = 0
-ownerId_wallPost = '-201637165' #ID группы
+ownerId_wallPost = '' #ID группы с минусом!!! в которую надо загружать посты
 from_group_wallPost = 1
-blacklist = ["#corsair ", "#corsair", "#palit ", "#palit", "#nvidia ", "#nvidia", "#Sapphire ", "#Sapphire", "#sapphire ", "#sapphire ", "@amdrussia"]
-stop_list = ["GFN", "GFN.RU", "реклама", "Реклама", "Команда NVIDIA", "http", "club", ".ru", ".RU", ".com", ".COM", "пишите", "Видео", "видео", "ролик", "Ролик"]
-TRANSPARENCY = 15
-tSleep = 5
-tSleep_for = 5
-tSleep_post = 1728
+blacklist = ["перечень", "слов", "при", "которые", "будут", "удалены", "из", "поста"]
+stop_list = ["перечень", "слов", "при", "которых", "пост", "не", "будет", "опубликован"]
+TRANSPARENCY = 15 #Процент наложения вотерки на фото
+tSleep = 5 #Время сна после прохождения цикла в секундах
+tSleep_for = 5 #Время сна после прохождения цикла в секундах
+tSleep_post = 1728 #Время сна после публикации поста в секундах

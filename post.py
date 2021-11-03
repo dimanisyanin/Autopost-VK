@@ -92,7 +92,7 @@ def main():
                             "owner_id":ownerId_wallPost,
                             "from_group":"1",
                             "attachments":attachments_MSG,
-                            "access_token": VK_API_STADALONE,
+                            "access_token": VK_API_USER,
                             "v": VK_API_V
                             }
                         wallGet = requests.get(url="https://api.vk.com/method/wall.post", params=PARAMS)
@@ -105,7 +105,7 @@ def main():
                             "from_group":from_group_wallPost,
                             "message":text,
                             "attachments":attachments_MSG,
-                            "access_token": VK_API_STADALONE,
+                            "access_token": VK_API_USER,
                             "v": VK_API_V
                             }
                         wallGet = requests.get(url="https://api.vk.com/method/wall.post", params=PARAMS)
@@ -125,7 +125,7 @@ def photos_save(file_name):
                                                                           'server': ur['server'],
                                                                           'photo': ur['photo'],
                                                                           'hash': ur['hash'],
-                                                                          'access_token': VK_API_STADALONE,
+                                                                          'access_token': VK_API_USER,
                                                                           'v': VK_API_V}).json()
 
         os.remove(file_name)
@@ -139,7 +139,7 @@ def photos_save(file_name):
 def get_upload_server():
     try:
         r = requests.get('https://api.vk.com/method/photos.getWallUploadServer', params={'group_id': ownerId_wallPost[1::],
-                                                                                        'access_token': VK_API_STADALONE,
+                                                                                        'access_token': VK_API_USER,
                                                                                         'v': VK_API_V}).json()
         return r['response']['upload_url']
     except:
