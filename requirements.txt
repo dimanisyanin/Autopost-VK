@@ -1,4 +1,1 @@
 Pillow==8.2.0
-aiogram==2.15
-aiohttp==3.8.0
-aiosignal==1.2.0
