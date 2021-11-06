@@ -14,6 +14,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
+
 db = SQLighter('posts.db')
 
 def write_json(data, filename):
