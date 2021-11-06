@@ -12,25 +12,16 @@ from io import BytesIO
 import os
 import logging
 import traceback
-from aiogram import Bot, types
-from aiogram.dispatcher import Dispatcher
-from aiogram.utils import executor
 
 logging.basicConfig(level=logging.INFO)
 
 db = SQLighter('posts.db')
-
-if TOKEN_TG_BOT:
-    bot = Bot(token=TOKEN_TG_BOT)
-    dp = Dispatcher(bot)
 
 def write_json(data, filename):
     with open(filename, 'w') as file:
         json.dump(data, file, indent=2, ensure_ascii=False)
 
 def main():
-    #while True:
-    #try:
     for group in vk_group:
         print("Group " + group)
         wallGet = requests.get(url="https://api.vk.com/method/wall.get", params={
@@ -123,13 +114,8 @@ def main():
                     print("kd yshlo")
         time.sleep(tSleep_for)
     time.sleep(tSleep)
-    #except Exception as e:
-        #er = 'Ошибка:\n' + traceback.format_exc()
-        #return er
-     #   return 'Ошибка:\n' + traceback.format_exc()
 
 def photos_save(file_name):
-    #try:
     upload_url = get_upload_server()
     file = {'file1':open(file_name, 'rb')}
     ur = requests.post(upload_url, files=file).json()
@@ -146,20 +132,14 @@ def photos_save(file_name):
     photo_id = r['response'][0]['id']
     temp = 'photo' + str(owner_id) + '_' + str(photo_id) + ','
     return(temp)
-    #except Exception as e:
-    #    return 'Ошибка:\n' + traceback.format_exc()
     
 def get_upload_server():
-    #try:
     r = requests.get('https://api.vk.com/method/photos.getWallUploadServer', params={'group_id': ownerId_wallPost[1::],
                                                                                     'access_token': VK_API_USER,
                                                                                     'v': VK_API_V}).json()
     return r['response']['upload_url']
-    #except Exception as e:
-    #    return 'Ошибка:\n' + traceback.format_exc()
 
 def download_img(url):
-    #try:
     p = requests.get(url)
     rnd = str(random.randint(1, 999999999999))
     file_name = 'temp_img/' + rnd + '.jpg'
@@ -187,8 +167,3 @@ def download_img(url):
     watermark.close()
 
     return(file_name2)
-    #except Exception as e:
-    #    return 'Ошибка:\n' + traceback.format_exc()
-
-#if __name__ == '__main__':
-#    main()
