@@ -5,6 +5,7 @@ from aiogram.utils import executor
 from post import main
 import logging
 import traceback
+from core import posts
 
 logging.basicConfig(level=logging.INFO)
 

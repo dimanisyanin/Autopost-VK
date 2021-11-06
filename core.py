@@ -4,7 +4,7 @@ import traceback
 
 logging.basicConfig(level=logging.INFO)
 
-def __init__():
+def posts():
     while True:
         try:
             main()
@@ -13,4 +13,4 @@ def __init__():
             #print('Ошибка:\n' + traceback.format_exc())
 
 if __name__ == '__main__':
-    __init__()
+    posts()
