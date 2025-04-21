@@ -1,10 +1,10 @@
-VK_API_USER = '' #https://vkhost.github.io/
+VK_API_USER = 'vk1.a.Frn-V9KFiragpjQH5XxGFRynkZ4bfJ9pduPi_q_RNUWlK7tD3rWJCqm6QLuT9oYhTQrwRU-YWnR5YFAvaj3Lf7jgLANLCYYYCDBaZT4sFgB5Ilvw1Af-pqoqnscU_P2bvy_lOQboZP0zx2Ydk0f2CKQk7GVpfDYNh-yw8mPMZZxkYl6Mim8DuUlVXqiI-4S9q1-Bw7SnkJmVfWJnoYGyQA' #https://vkhost.github.io/
 VK_API_V = '5.131'
-vk_group = ["-1", "-2", "-3", "-4"] #Перечень групп с которых надо брать посты вводить ID групп с минусом!!!
+vk_group = ["-29413904"] #Перечень групп с которых надо брать посты вводить ID групп с минусом!!!
 filter_wallGet = 'all'
 count_wallGet = 10 #Сколько новых постов будет видеть скрипт в групах, максимум 100
 extended_wallGet = 0
-ownerId_wallPost = '' #ID группы с минусом!!! в которую надо загружать посты
+ownerId_wallPost = '-152502416' #ID группы с минусом!!! в которую надо загружать посты
 from_group_wallPost = 1
 blacklist = ["перечень", "слов", "при", "которые", "будут", "удалены", "из", "поста"]
 stop_list = ["перечень", "слов", "при", "которых", "пост", "не", "будет", "опубликован"]
